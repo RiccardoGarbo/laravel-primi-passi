@@ -13,8 +13,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    $hello = ['message' => 'Hello World!!!'];
+Route::get('/',  function () {
+    $message = ['message' => 'Benvenuto!'];
+    $links = ['documentation','info','questions'];
+    ;
+   return view('home', $message, ['links'=> $links] );
+})->name('home');
 
-    return view('home', $hello);
-});
+Route::get('/subpage/documentation',  function () {;
+  return view('subpage.documentation');
+})->name('documentation');
+
+Route::get('/subpage/info',  function () {;
+  return view('subpage.info');
+})->name('info');
+
+Route::get('/subpage/questions',  function () {;
+  return view('subpage.questions');
+})->name('questions');
+

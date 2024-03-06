@@ -7,10 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>{{$message}}</h1>
-    @foreach ( $links as $link )
-        <a href="{{route("$link")}}">{{$link}}</a>       
-    @endforeach
+    <h1>Pagina Info</h1>
+    <a href="{{route('home')}}">Torna alla home!</a>
     
 </body>
 </html>
